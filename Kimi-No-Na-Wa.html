@@ -1,20 +1,4 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>HRNBeatZ - Music Producer</title>
-        <style>
-		.ser {
-			width: 100%;
-			max-width: 550px;
-		}
-	</style>
-	<script>
-		setTimeout(function(){ location.reload(); }, 2000);
-	</script>
-</head>
-<body>
-<center><img class="ser" src="https://steamusercontent-a.akamaihd.net/ugc/940561069985903069/E0F2DA82EF52520135AF9A1FBE4FF55CCFAD9647/" /></center>
-</body>
 </html>
 <!--[if lt IE 7 ]> <html class="ie6 language-en" lang="en"> <![endif]-->
 <!--[if IE 7 ]>	<html class="ie7 language-en" lang="en"> <![endif]-->
@@ -42,10 +26,32 @@
 BODY { background: url(http://animeindo.moe/wp-content/uploads/2018/08/warna.png) fixed }
 -->
 </style>
-	
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
 </head>	
 <body onload="loadAds()" background="http://animeindo.moe/wp-content/uploads/2018/08/warna.png" bgproperties="fixed">
 
+<style>
+    #overlay {
+        background: #ffffff;
+        color: #666666;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: 5000;
+        top: 0;
+        left: 0;
+        float: left;
+        text-align: center;
+        padding-top: 25%;
+    }
+</style>
+<div id="overlay">
+<center><img src="https://steamusercontent-a.akamaihd.net/ugc/940561069985903069/E0F2DA82EF52520135AF9A1FBE4FF55CCFAD9647/" /></center><br/>
+    Loading...
+</div>
+	
 <script>
 // Disable right-click pictorial harunkwbeatz.bandzoogle.com
 var DADrccolor = "#F1F1F1";
