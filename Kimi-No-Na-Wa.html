@@ -21,34 +21,33 @@
 <meta name="msapplication-config" content="none">
 <title>Kimi no Na wa BD 720p Sub Indo</title>
 	
-  <link rel="stylesheet" href="../themes/blue/pace-theme-center-simple.css" />
+<style>
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(images/loader-64x/Preloader_2.gif) center no-repeat #fff;
+}
+</style>
 
-  <script>
-    paceOptions = {
-      elements: true
-    };
-  </script>
-  <script src="../pace.js"></script>
-  <script>
-    function load(time){
-      var x = new XMLHttpRequest()
-      x.open('GET', "http://localhost:5646/walter/" + time, true);
-      x.send();
-    };
-    load(20);
-    load(100);
-    load(500);
-    load(2000);
-    load(3000);
-    setTimeout(function(){
-      Pace.ignore(function(){
-        load(3100);
-      });
-    }, 4000);
-    Pace.on('hide', function(){
-      console.log('done');
-    });
-  </script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+<script>
+	//paste this code under head tag or in a seperate js file.
+	// Wait for window load
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+</script>
 	
 <style type="text/css">
 <!--
@@ -58,16 +57,24 @@ BODY { background: url(https://www.animebatch.web.id/wp-content/uploads/2018/05/
 
 </head>	
 <body background="https://www.animebatch.web.id/wp-content/uploads/2018/05/1-89.jpg" bgproperties="fixed">
+
+	<!-- Paste this code after body tag -->
+	<div class="se-pre-con"></div>
+	<!-- Ends -->
 	
-  <input id="range" type="range" min="0" max="100">
-  <script>
-    range.addEventListener('input', function(){
-      document.querySelector('.pace').classList.remove('pace-inactive');
-      document.querySelector('.pace').classList.add('pace-active');
-      document.querySelector('.pace-progress').setAttribute('data-progress-text', range.value + '%');
-      document.querySelector('.pace-progress').setAttribute('style', '-webkit-transform: translate3d(' + range.value + '%, 0px, 0px)');
-    });
-  </script>	
+	<div class="content">
+	<div class="back-to-article"><p><a href="http://smallenvelop.com/blog/display-loading-icon-page-loads-completely/">&lt;&lt; Back to the article !!</a></p></div>
+	<img src="http://smallenvelop.com/wp-content/uploads/2014/08/simple-pre-loader.jpg
+" style="visibility: hidden; width:100%; height: auto;">
+	</div>
+	<style>
+		.content {
+			background: url(http://smallenvelop.com/wp-content/uploads/2014/08/simple-pre-loader.jpg
+) center no-repeat;
+			background-size: 100%;
+			width: 100%;
+		}
+	</style>	
 	
 <script>
 // Disable right-click pictorial harunkwbeatz.bandzoogle.com
