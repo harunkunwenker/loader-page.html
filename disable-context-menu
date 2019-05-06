@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Disable Context Menu</title>
+<script type="text/jscript">
+  function disableContextMenu()
+  {
+    window.frames["fraDisabled"].document.oncontextmenu = function(){alert("No way!"); return false;};   
+    // Or use this
+    // document.getElementById("fraDisabled").contentWindow.document.oncontextmenu = function(){alert("No way!"); return false;};;    
+  }  
+</script>
+</head>
+<body bgcolor="#FFFFFF" onload="disableContextMenu();" oncontextmenu="return false">
+<center>
+<iframe id="fraDisabled" src="https://drive.google.com/file/d/1jwtHbC9zhO3-w9dpGgXiRvjGXULBbakx/preview" allowfullscreen="true"
+ webkitallowfullscreen="true" mozallowfullscreen="true" onload="disableContextMenu();" onmyload="disableContextMenu();"
+ width="750" height="410"></iframe></center>
+</body>
+</html>
